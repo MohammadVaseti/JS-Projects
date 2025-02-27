@@ -1,0 +1,26 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.container{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  width: 60%;
+}
+
+h1{
+  margin-top: 20px;
+  padding: 20px;
+  background-color: blue;
+  color: white;
+  font-size: 25px;
+}
