@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Change CSS Styles</title>
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nobis
+        cumque quisquam adipisci eos doloribus provident, facere commodi natus
+        eaque quam doloremque explicabo exercitationem facilis magnam nam
+        impedit porro quidem assumenda vero tenetur obcaecati beatae! Rerum
+        quisquam dolore doloribus doloremque! Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Possimus porro cum magni ullam ipsam.
+        Quos, necessitatibus. Dignissimos quis adipisci, nisi doloremque alias
+        nobis rem et quaerat placeat blanditiis animi ipsa excepturi
+        praesentium, quasi vero earum eius omnis ad! Officiis tenetur minus
+        vitae voluptates corporis impedit voluptas explicabo eum vel! Atque.
+      </p>
+    </div>
+
+    <div class="container">
+      <div>
+        <label>Font:</label>
+        <select name="font_family" class="select">
+          <option value="1">Sans-serif</option>
+          <option value="2">Tahoma</option>
+          <option value="3">Georia</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="size-label">Font Size : 10px</label>
+        <input
+          type="range"
+          value="10"
+          min="1"
+          max="20"
+          step="1"
+          class="range"
+        />
+      </div>
+      <div>
+        <label>Font color</label>
+        <div class="colors color1"></div>
+        <div class="colors color2"></div>
+        <div class="colors color3"></div>
+        <div class="colors color4"></div>
+      </div>
+
+      <div>
+        <label>Font Style</label>
+        <button type="button" class="italicBtn">italic</button>
+        <button type="button" class="lightBtn">light</button>
+        <button type="button" class="boldBtn">bold</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(187, 255, 0);
+}
+
+.content {
+  width: 60%;
+  height: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+
+  background-color: rgb(152, 218, 155);
+}
+
+.range {
+  margin: 0 10px;
+}
+
+select {
+  margin-top: 10px;
+  height: 30px;
+}
+
+label {
+  margin: 15px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px;
+}
+
+.colors {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 15px 5px;
+}
+
+.color1 {
+  background-color: black;
+}
+
+.color2 {
+  background-color: red;
+}
+
+.color3 {
+  background-color: blue;
+}
+
+.color4 {
+  background-color: green;
+}
