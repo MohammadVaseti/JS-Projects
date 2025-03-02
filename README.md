@@ -1,12 +1,16 @@
 # About Repository
->## All of The Projects Written By Vanilla JavaScript ## 
-![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e
-)
----
+
+> ## All of The Projects Written By Vanilla JavaScript
+>
+> ![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e
+
+## )
+
 **This Repository Contains My Begginer JavaScript Projects**
-1. ### Drum Kit : *By Click On Your Keyboard You Can Hear Specific Tone*
-2. ### Guess My Numeber : *a Simple Game You Can Play and Enjoy*
-3. ### Rock Paper Scissors : *Back to Your Childhood With This Nostalgic Game*
-4. ### RGB-Range : *You Can Create Your Own RGB Color*
-5. ### Simple-Text-Editor : *You Can Change Styles of Your Text With This Simple Editor*
-6. ### Digital Clock : *a Simple Clock To Check The Time*
+
+1. ### Drum Kit : _By Click On Your Keyboard You Can Hear Specific Tone_
+2. ### Guess My Numeber : _a Simple Game You Can Play and Enjoy_
+3. ### Rock Paper Scissors : _Back to Your Childhood With This Nostalgic Game_
+4. ### RGB-Range : _You Can Create Your Own RGB Color_
+5. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
+6. ### Digital Clock : _a Simple Clock To Check The Time_
