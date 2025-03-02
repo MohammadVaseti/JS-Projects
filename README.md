@@ -2,9 +2,7 @@
 
 > ## All of The Projects Written By Vanilla JavaScript
 >
-> ![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e
-
-## )
+> ![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e)
 
 **This Repository Contains My Begginer JavaScript Projects**
 
@@ -14,3 +12,5 @@
 4. ### RGB-Range : _You Can Create Your Own RGB Color_
 5. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
 6. ### Digital Clock : _a Simple Clock To Check The Time_
+7. ### BMI : _Calculate BMI of Your Body_
+
