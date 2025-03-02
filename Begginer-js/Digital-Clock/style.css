@@ -1,0 +1,30 @@
+body{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+}
+.container{
+  background-color: white;
+  width: 40%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px; 
+
+}
+.hour,
+.min,
+.sec
+{
+  margin: 0 20px;
+  padding: 30px;
+  background-color: rgb(229, 233, 233);
+  border-radius: 25px; 
+  
+}
+span{
+  font-size: 30px;
+}
