@@ -9,3 +9,4 @@
 3. ### Rock Paper Scissors : *Back to Your Childhood With This Nostalgic Game*
 4. ### RGB-Range : *You Can Create Your Own RGB Color*
 5. ### Simple-Text-Editor : *You Can Change Styles of Your Text With This Simple Editor*
+6. ### Digital Clock : *a Simple Clock To Check The Time*
