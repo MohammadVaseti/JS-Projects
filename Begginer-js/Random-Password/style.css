@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 80%;
+  height: 40%;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+}
+input{
+  width: 300px;
+  margin: 10px 0;
+}
+span{
+  padding: 5px;
+  margin-left: 10px;
+  background-color: white;
+}
+
+.rangeContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
