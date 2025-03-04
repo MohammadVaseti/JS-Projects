@@ -13,4 +13,6 @@
 5. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
 6. ### Digital Clock : _a Simple Clock To Check The Time_
 7. ### BMI : _Calculate BMI of Your Body_
+8. ### Random-Password : _Generate New Password For Yourself_
+
 
