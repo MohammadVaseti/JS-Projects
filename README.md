@@ -1,6 +1,6 @@
 # About Repository
 
-> ## All of The Projects Written By Vanilla JavaScript
+> ## All The Projects Written in Vanilla JavaScript
 >
 > ![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e)
 
