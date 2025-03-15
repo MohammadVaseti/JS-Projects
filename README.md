@@ -15,3 +15,4 @@
 7. ### BMI : _Calculate BMI of Your Body_
 8. ### Random-Password : _Generate New Password For Yourself_
 9. ### Modal : _Simple Modal_
+10. ### RND BG Color : _Random Background Color_
