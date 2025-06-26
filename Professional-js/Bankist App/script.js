@@ -68,6 +68,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // start of coding
 
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
   movements.forEach(function (mov, i, arr) {
     const html = `
       <div class="movements__row">
