@@ -103,12 +103,51 @@ createUserNames(accounts);
 // console.log(accounts);
 
 //////////////////
+
+// in out balance
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const incomes = movements
+  .filter(function (v, i, arr) {
+    return v > 0;
+  })
+  .reduce(function (acc, v, i, arr) {
+    return acc + v;
+  }, 0);
+console.log(incomes);
+labelSumIn.textContent = incomes;
+
+const out = movements
+  .filter(function (v, i, arr) {
+    return v < 0;
+  })
+  .reduce(function (acc, v, i, arr) {
+    return acc + v;
+  }, 0);
+console.log(out);
+labelSumOut.textContent = Math.abs(out);
+
+const interest = movements
+  .filter(function (v, i, arr) {
+    return v > 0;
+  })
+  .map(function (v, i, arr) {
+    return (v * 1.2) / 100;
+  })
+  .filter(function (v, i, arr) {
+    return v >= 1;
+  })
+  .reduce(function (acc, v, i, arr) {
+    return acc + v;
+  }, 0);
+
+labelSumInterest.textContent = interest;
+
+// //////////////////
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
