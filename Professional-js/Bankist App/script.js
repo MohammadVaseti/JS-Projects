@@ -66,7 +66,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // LECTURES
 
 // start of coding
-
+// creating DOM elements
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
   movements.forEach(function (mov, i, arr) {
@@ -83,7 +83,26 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+// ////////////////////
+// computing usernames
+// Steven Thomas Williams stw
 
+const createUserNames = function (accs) {
+  // console.log(accs);
+  accs.forEach(function (v, i, arr) {
+    v.username = v.owner
+      .toLowerCase()
+      .split(' ')
+      .map(function (cv, i, arr) {
+        return cv.at(0);
+      })
+      .join('');
+  });
+};
+createUserNames(accounts);
+// console.log(accounts);
+
+//////////////////
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
