@@ -142,7 +142,7 @@ const interest = movements
 
 labelSumInterest.textContent = interest;
 
-// //////////////////
+// //////////////////////////
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
