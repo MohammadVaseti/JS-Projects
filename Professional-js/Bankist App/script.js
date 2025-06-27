@@ -106,6 +106,10 @@ createUserNames(accounts);
 
 // in out balance
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const total = movements.reduce(function (acc, v, i, arr) {
+  return acc + v;
+}, 0);
+labelBalance.textContent = total;
 const incomes = movements
   .filter(function (v, i, arr) {
     return v > 0;
@@ -113,7 +117,7 @@ const incomes = movements
   .reduce(function (acc, v, i, arr) {
     return acc + v;
   }, 0);
-console.log(incomes);
+// console.log(incomes);
 labelSumIn.textContent = incomes;
 
 const out = movements
@@ -123,7 +127,7 @@ const out = movements
   .reduce(function (acc, v, i, arr) {
     return acc + v;
   }, 0);
-console.log(out);
+// console.log(out);
 labelSumOut.textContent = Math.abs(out);
 
 const interest = movements
@@ -145,11 +149,25 @@ labelSumInterest.textContent = interest;
 // //////////////////////////
 
 // implementing login
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
 
+  accounts.forEach(function (v, i, arr) {
+    if (
+      v.username == inputLoginUsername.value &&
+      v.pin == inputLoginPin.value
+    ) {
+      labelWelcome.textContent = `Welcome ${v.owner}`;
+      containerApp.style.opacity = 100;
+    }
+  });
+  inputLoginUsername.value = '';
+  inputLoginPin.value = '';
+});
+/////////////////////////////////////////////////
+////////////////////
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-
-/////////////////////////////////////////////////
