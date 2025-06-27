@@ -144,6 +144,8 @@ labelSumInterest.textContent = interest;
 
 // //////////////////////////
 
+// implementing login
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
