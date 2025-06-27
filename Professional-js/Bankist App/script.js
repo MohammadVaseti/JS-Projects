@@ -82,7 +82,6 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
 // ////////////////////
 // computing usernames
 // Steven Thomas Williams stw
@@ -106,45 +105,52 @@ createUserNames(accounts);
 
 // in out balance
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-const total = movements.reduce(function (acc, v, i, arr) {
-  return acc + v;
-}, 0);
-labelBalance.textContent = total;
-const incomes = movements
-  .filter(function (v, i, arr) {
-    return v > 0;
-  })
-  .reduce(function (acc, v, i, arr) {
+
+const balance = function (arr) {
+  return arr.reduce(function (acc, v, i) {
     return acc + v;
   }, 0);
-// console.log(incomes);
-labelSumIn.textContent = incomes;
+};
+// ///////////
 
-const out = movements
-  .filter(function (v, i, arr) {
-    return v < 0;
-  })
-  .reduce(function (acc, v, i, arr) {
-    return acc + v;
-  }, 0);
-// console.log(out);
-labelSumOut.textContent = Math.abs(out);
+const incomes = function (arr) {
+  return arr
+    .filter(function (v, i, arr) {
+      return v > 0;
+    })
+    .reduce(function (acc, v, i, arr) {
+      return acc + v;
+    }, 0);
+};
 
-const interest = movements
-  .filter(function (v, i, arr) {
-    return v > 0;
-  })
-  .map(function (v, i, arr) {
-    return (v * 1.2) / 100;
-  })
-  .filter(function (v, i, arr) {
-    return v >= 1;
-  })
-  .reduce(function (acc, v, i, arr) {
-    return acc + v;
-  }, 0);
+// /////////////
+const out = function (arr) {
+  return arr
+    .filter(function (v, i, arr) {
+      return v < 0;
+    })
+    .reduce(function (acc, v, i, arr) {
+      return acc + v;
+    }, 0);
+};
 
-labelSumInterest.textContent = interest;
+// /////////////////
+
+const interest = function (arr) {
+  return arr
+    .filter(function (v, i, arr) {
+      return v > 0;
+    })
+    .map(function (v, i, arr) {
+      return (v * 1.2) / 100;
+    })
+    .filter(function (v, i, arr) {
+      return v >= 1;
+    })
+    .reduce(function (acc, v, i, arr) {
+      return acc + v;
+    }, 0);
+};
 
 // //////////////////////////
 
@@ -161,7 +167,12 @@ btnLogin.addEventListener('click', function (e) {
       v.pin == inputLoginPin.value
     ) {
       labelWelcome.textContent = `Welcome ${v.owner}`;
+      displayMovements(v.movements);
       containerApp.style.opacity = 100;
+      labelBalance.textContent = balance(v.movements);
+      labelSumIn.textContent = incomes(v.movements);
+      labelSumOut.textContent = Math.abs(out(v.movements));
+      labelSumInterest.textContent = Math.round(interest(v.movements));
     }
   });
 
