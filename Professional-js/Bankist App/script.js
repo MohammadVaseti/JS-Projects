@@ -149,10 +149,13 @@ labelSumInterest.textContent = interest;
 // //////////////////////////
 
 // implementing login
+
+let currenAccount;
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
-  accounts.forEach(function (v, i, arr) {
+  currenAccount = accounts.find(function (v) {
     if (
       v.username == inputLoginUsername.value &&
       v.pin == inputLoginPin.value
@@ -161,6 +164,7 @@ btnLogin.addEventListener('click', function (e) {
       containerApp.style.opacity = 100;
     }
   });
+
   inputLoginUsername.value = '';
   inputLoginPin.value = '';
 });
