@@ -68,6 +68,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // creating dome elements
 
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
   movements.forEach(function (mov, i, arr) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
 
@@ -81,7 +82,7 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
-// //////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////end
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
