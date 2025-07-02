@@ -61,9 +61,15 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+// looping Arrays forEach
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+movements.forEach(function(cv,i,arr){
+  console.log(cv);
+})
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
@@ -71,6 +77,5 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
