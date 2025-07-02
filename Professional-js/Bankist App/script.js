@@ -83,6 +83,31 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 // //////////////////////////////////////////////////////end
+// computing usernames
+
+// Steven Thomas Williams=====stw
+const createUserName = function (acc) {
+  const newUserName = username
+    .toLowerCase()
+    .split(' ')
+    .map(function (e, i, arr) {
+      return e.at(0);
+    })
+    .join('');
+};
+createUserName(account1.owner);
+
+// how to create username
+// const username = 'Steven Thomas Williams';
+// const newUserName = username
+//   .toLowerCase()
+//   .split(' ')
+//   .map(function (e, i, arr) {
+//     return e.at(0);
+//   })
+//   .join('');
+// console.log(newUserName);
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
