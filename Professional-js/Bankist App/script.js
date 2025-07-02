@@ -73,29 +73,18 @@ const displayMovements = function (movements) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `<div class="movements__row">
-          <div class="movements__type movements__type--${type}"> ${
+    <div class="movements__type movements__type--${type}"> ${
       i + 1
     } ${type}</div>
-          <div class="movements__value">${mov}</div>
-        </div>`;
+    <div class="movements__value">${mov}</div>
+    </div>`;
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 displayMovements(account1.movements);
 // //////////////////////////////////////////////////////end
-// computing usernames
 
-// Steven Thomas Williams=====stw
-const createUserName = function (acc) {
-  const newUserName = username
-    .toLowerCase()
-    .split(' ')
-    .map(function (e, i, arr) {
-      return e.at(0);
-    })
-    .join('');
-};
-createUserName(account1.owner);
+// computing usernames
 
 // how to create username
 // const username = 'Steven Thomas Williams';
@@ -107,7 +96,17 @@ createUserName(account1.owner);
 //   })
 //   .join('');
 // console.log(newUserName);
-
+// Steven Thomas Williams=====stw
+const createUserName = function (username) {
+  const newUserName = username
+    .toLowerCase()
+    .split(' ')
+    .map((e, i, arr) => e.at(0))
+    .join('');
+  return newUserName;
+};
+console.log(createUserName(account1.owner));
+// /////////////////////////////////////
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
