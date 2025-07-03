@@ -108,7 +108,7 @@ const createUserName = function (accs) {
 };
 // console.log(createUserName(accounts));
 createUserName(accounts);
-console.log(accounts);
+// console.log(accounts);
 // /////////////////////////////////////end
 
 // the reduce method
@@ -143,6 +143,16 @@ const calcDisplaySummary = function (movements) {
 };
 calcDisplaySummary(account1.movements);
 // ///////////////////
+// Implementing Login
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  // console.log('click');
+  currentAccount = accounts.find(
+    el => el.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
