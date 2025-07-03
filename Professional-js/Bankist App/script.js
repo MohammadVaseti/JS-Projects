@@ -97,16 +97,22 @@ displayMovements(account1.movements);
 //   .join('');
 // console.log(newUserName);
 // Steven Thomas Williams=====stw
-const createUserName = function (username) {
-  const newUserName = username
-    .toLowerCase()
-    .split(' ')
-    .map((e, i, arr) => e.at(0))
-    .join('');
-  return newUserName;
+const createUserName = function (accs) {
+  accs.forEach(function (acc, i, arr) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map((e, i, arr) => e.at(0))
+      .join('');
+  });
 };
-console.log(createUserName(account1.owner));
-// /////////////////////////////////////
+// console.log(createUserName(accounts));
+createUserName(accounts);
+console.log(accounts);
+// /////////////////////////////////////end
+
+//  the magic of chaining
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
