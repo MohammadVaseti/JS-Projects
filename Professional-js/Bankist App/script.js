@@ -67,7 +67,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // LECTURES
 // creating dome elements
 
-const displayMovements = function (movements) {
+const calcDisplayMovements = function (movements) {
   containerMovements.innerHTML = '';
   movements.forEach(function (mov, i, arr) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
@@ -81,7 +81,7 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
+// calcDisplayMovements(account1.movements);
 // //////////////////////////////////////////////////////end
 
 // computing usernames
@@ -116,32 +116,32 @@ const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, v) => acc + v, 0);
   labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account3.movements);
+// calcDisplayBalance(account3.movements);
 
 // //////////////////////////////////////////////end
 //  the magic of chaining
 
-const calcDisplaySummary = function (movements) {
+const calcDisplaySummary = function (acc) {
   // incomes
-  const incomes = movements
+  const incomes = acc.movements
     .filter((v, i, arr) => v > 0)
     .reduce((acc, v, i, arr) => acc + v, 0);
   labelSumIn.textContent = `${incomes}€`;
   // outcomes
-  const out = movements
+  const out = acc.movements
     .filter((v, i, arr) => v < 0)
     .reduce((acc, v, i, arr) => acc + v, 0);
   labelSumOut.textContent = `${Math.abs(out)}€`;
 
   // interest
-  const interest = movements
+  const interest = acc.movements
     .filter((v, i, arr) => v > 0)
-    .map((v, i, arr) => (v * 1.2) / 100)
+    .map((v, i, arr) => (v * `${acc.interestRate}`) / 100)
     .filter((v, i, arr) => v > 1)
     .reduce((acc, v, i, arr) => acc + v, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 // ///////////////////
 // Implementing Login
 let currentAccount;
@@ -151,7 +151,25 @@ btnLogin.addEventListener('click', function (e) {
   currentAccount = accounts.find(
     el => el.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
+  // console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // console.log('login');
+    // display UI
+    containerApp.style.opacity = 100;
+    labelWelcome.textContent = `Welcome Back ${currentAccount.owner
+      .split(' ')
+      .at(0)} ❤`;
+
+    // display movements
+    calcDisplayMovements(currentAccount.movements);
+    // display balance
+    calcDisplayBalance(currentAccount.movements);
+    // display summary
+    calcDisplaySummary(currentAccount);
+  }
+  inputLoginUsername.value = inputLoginPin.value = '';
+  inputLoginPin.blur();
 });
 
 const currencies = new Map([
