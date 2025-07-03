@@ -136,10 +136,12 @@ const calcDisplaySummary = function (movements) {
   // interest
   const interest = movements
     .filter((v, i, arr) => v > 0)
-    .map((v, i, arr) => v * 1.2)
+    .map((v, i, arr) => (v * 1.2) / 100)
+    .filter((v, i, arr) => v > 1)
     .reduce((acc, v, i, arr) => acc + v, 0);
+  labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account3.movements);
+calcDisplaySummary(account1.movements);
 // ///////////////////
 
 const currencies = new Map([
