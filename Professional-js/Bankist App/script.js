@@ -111,7 +111,36 @@ createUserName(accounts);
 console.log(accounts);
 // /////////////////////////////////////end
 
+// the reduce method
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, v) => acc + v, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account3.movements);
+
+// //////////////////////////////////////////////end
 //  the magic of chaining
+
+const calcDisplaySummary = function (movements) {
+  // incomes
+  const incomes = movements
+    .filter((v, i, arr) => v > 0)
+    .reduce((acc, v, i, arr) => acc + v, 0);
+  labelSumIn.textContent = `${incomes}€`;
+  // outcomes
+  const out = movements
+    .filter((v, i, arr) => v < 0)
+    .reduce((acc, v, i, arr) => acc + v, 0);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  // interest
+  const interest = movements
+    .filter((v, i, arr) => v > 0)
+    .map((v, i, arr) => v * 1.2)
+    .reduce((acc, v, i, arr) => acc + v, 0);
+};
+calcDisplaySummary(account3.movements);
+// ///////////////////
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
