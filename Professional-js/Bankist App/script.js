@@ -209,6 +209,12 @@ btnTransfer.addEventListener('click', e => {
 
 // ////////////////////
 
+// the findIndex method
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+});
+
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
