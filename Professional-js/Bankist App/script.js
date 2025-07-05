@@ -112,9 +112,10 @@ createUserName(accounts);
 // /////////////////////////////////////end
 
 // the reduce method
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, v) => acc + v, 0);
-  labelBalance.textContent = `${balance}€`;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, v) => acc + v, 0);
+
+  labelBalance.textContent = `${acc.balance}€`;
 };
 // calcDisplayBalance(account3.movements);
 
@@ -143,6 +144,18 @@ const calcDisplaySummary = function (acc) {
 };
 // calcDisplaySummary(account1.movements);
 // ///////////////////
+
+// update ui function for implelementing transfer video
+
+const updateUI = function (acc) {
+  // display movements
+  calcDisplayMovements(acc.movements);
+  // display balance
+  calcDisplayBalance(acc);
+  // display summary
+  calcDisplaySummary(acc);
+};
+
 // Implementing Login
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
@@ -160,22 +173,44 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome Back ${currentAccount.owner
       .split(' ')
       .at(0)} ❤`;
-
-    // display movements
-    calcDisplayMovements(currentAccount.movements);
-    // display balance
-    calcDisplayBalance(currentAccount.movements);
-    // display summary
-    calcDisplaySummary(currentAccount);
+    updateUI(currentAccount);
   }
   inputLoginUsername.value = inputLoginPin.value = '';
   inputLoginPin.blur();
 });
+
+/////////////////////////////////////////////////
+
+// Implementing Transfers
+
+btnTransfer.addEventListener('click', e => {
+  e.preventDefault(e);
+  const amount = Number(inputTransferAmount.value);
+  const recieverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
+  // console.log(amount, recieverAcc);
+  inputTransferTo.value = ' ';
+  inputTransferAmount.value = '';
+  inputTransferAmount.blur();
+
+  if (
+    amount > 0 &&
+    recieverAcc &&
+    currentAccount.balance >= amount &&
+    recieverAcc?.username !== currentAccount.username
+  ) {
+    // doing the transfer
+    currentAccount.movements.push(-amount);
+    recieverAcc.movements.push(amount);
+    updateUI(currentAccount);
+  }
+});
+
+// ////////////////////
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-
-/////////////////////////////////////////////////
