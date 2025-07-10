@@ -252,10 +252,11 @@ btnClose.addEventListener('click', function (e) {
 });
 
 // sorting arrays
-
+let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault;
-  calcDisplayMovements(currentAccount.movements, true);
+  calcDisplayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 
 const currencies = new Map([
