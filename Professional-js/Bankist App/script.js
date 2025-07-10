@@ -67,7 +67,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // LECTURES
 // creating dome elements
 
-const calcDisplayMovements = function (movements) {
+const calcDisplayMovements = function (movements, sort) {
   containerMovements.innerHTML = '';
   movements.forEach(function (mov, i, arr) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
