@@ -67,9 +67,12 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // LECTURES
 // creating dome elements
 
-const calcDisplayMovements = function (movements, sort) {
+const calcDisplayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-  movements.forEach(function (mov, i, arr) {
+  // sorting arrays
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i, arr) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `<div class="movements__row">
@@ -246,6 +249,13 @@ btnClose.addEventListener('click', function (e) {
   inputCloseUsername.value = ' ';
   inputClosePin.value = ' ';
   inputClosePin.blur();
+});
+
+// sorting arrays
+
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault;
+  calcDisplayMovements(currentAccount.movements, true);
 });
 
 const currencies = new Map([
