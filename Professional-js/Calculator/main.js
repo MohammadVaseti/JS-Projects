@@ -1,22 +1,22 @@
+"use strict";
+
+// Elements
 const display1El = document.querySelector(".display-1");
 const display2El = document.querySelector(".display-2");
 const tempResultEl = document.querySelector(".temp-result");
-
 const numbersEl = document.querySelectorAll(".number");
 const operationsEl = document.querySelectorAll(".operation");
 const equalEl = document.querySelector(".equal");
-
 const clearAll = document.querySelector(".clearAll");
 const clearlast = document.querySelector(".clearLast");
-
 const dotEl = document.querySelector(".dot");
 
-let display1Num = "";
-let display2Num = "";
-let tempResultNum = null;
+const display1Num = "";
+const display2Num = "";
+const tempResultNum = null;
 
-let lastOperation = "";
-let haveDot = false;
+const lastOperation = "";
+const haveDot = false;
 
 numbersEl.forEach((n) => {
   n.addEventListener("click", (e) => {
@@ -37,7 +37,7 @@ operationsEl.forEach((o) => {
     } else {
       haveDot = false;
     }
-    let operationName = e.target.innerText;
+    const operationName = e.target.innerText;
     if (display1Num && display2Num && lastOperation) {
       mathOperation();
     } else {
