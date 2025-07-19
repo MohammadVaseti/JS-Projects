@@ -258,6 +258,19 @@ btnSort.addEventListener('click', function (e) {
   calcDisplayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
+// remainder operator
+
+labelBalance.addEventListener('click', e => {
+  [
+    ...document.querySelectorAll('.movements__row').forEach(function (v, i) {
+      if (i % 2 === 0) {
+        v.style.backgroundColor = 'red';
+      } else if (i % 2 === 1) {
+        v.style.backgroundColor = 'blue';
+      }
+    }),
+  ];
+});
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
