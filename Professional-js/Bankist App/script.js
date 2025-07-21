@@ -321,9 +321,9 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 const now = new Date();
-labelDate.textContent = `As of ${now.getDay()}/${
-  now.getMonth() + 1
-}/${now.getFullYear()}`;
+labelDate.textContent = `As of ${now.getDate().padStart(2, 0)}/${
+  now.getMonth().padStart(2, 0) + 1
+}/${now.getFullYear()}, ${now.getHours()}:${now.getMinutes()}`;
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
