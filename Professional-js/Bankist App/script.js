@@ -65,8 +65,8 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-// implementing Dates
-// fake always logged in
+
+// ///////////
 
 // creating dome elements
 
@@ -314,6 +314,12 @@ labelBalance.addEventListener('click', e => {
     }),
   ];
 });
+
+// implementing Dates
+// fake always logged in
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
