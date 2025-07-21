@@ -65,6 +65,9 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+// implementing Dates
+// fake always logged in
+
 // creating dome elements
 
 const calcDisplayMovements = function (movements, sort = false) {
