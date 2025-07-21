@@ -10,6 +10,16 @@ const account1 = {
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
+  movementsDates: [
+    '2019-11-01T13:15:33.035Z',
+    '2019-11-30T09:48:16.867Z',
+    '2019-12-25T06:04:23.907Z',
+    '2020-01-25T14:18:46.235Z',
+    '2020-02-05T16:33:06.386Z',
+    '2020-04-10T14:43:26.374Z',
+    '2020-06-25T18:49:59.371Z',
+    '2020-07-26T12:01:20.894Z',
+  ],
 };
 
 const account2 = {
@@ -17,6 +27,16 @@ const account2 = {
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
+  movementsDates: [
+    '2019-11-01T13:15:33.035Z',
+    '2019-11-30T09:48:16.867Z',
+    '2019-12-25T06:04:23.907Z',
+    '2020-01-25T14:18:46.235Z',
+    '2020-02-05T16:33:06.386Z',
+    '2020-04-10T14:43:26.374Z',
+    '2020-06-25T18:49:59.371Z',
+    '2020-07-26T12:01:20.894Z',
+  ],
 };
 
 const account3 = {
@@ -70,18 +90,36 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // creating dome elements
 
-const calcDisplayMovements = function (movements, sort = false) {
+const calcDisplayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
   // sorting arrays
-  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  const movs = sort
+    ? acc.movements.slice().sort((a, b) => a - b)
+    : acc.movements;
 
   movs.forEach(function (mov, i, arr) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const date = new Date(acc.movementsDates[i]);
+    const now = new Date();
+    const displayDate = `${date.getDate()}/${
+      date.getMonth() + 1
+    }/${now.getFullYear()}`;
 
     const html = `<div class="movements__row">
     <div class="movements__type movements__type--${type}"> ${
       i + 1
     } ${type}</div>
+
+
+          <div class="movements__date">${displayDate}</div>
+
+
+
+
+
+
+
     <div class="movements__value">${mov.toFixed(2)}</div>
     </div>`;
     containerMovements.insertAdjacentHTML('afterbegin', html);
@@ -155,7 +193,7 @@ const calcDisplaySummary = function (acc) {
 
 const updateUI = function (acc) {
   // display movements
-  calcDisplayMovements(acc.movements);
+  calcDisplayMovements(acc);
   // display balance
   calcDisplayBalance(acc);
   // display summary
@@ -181,6 +219,13 @@ btnLogin.addEventListener('click', function (e) {
       .at(0)} ❤`;
     updateUI(currentAccount);
   }
+  // current Date
+  const now = new Date();
+  labelDate.textContent = `As of ${now.getDate()}/${
+    now.getMonth() + 1
+  }/${now.getFullYear()}, ${now.getHours()}:${now.getMinutes()}`;
+
+  // clear input fields
   inputLoginUsername.value = inputLoginPin.value = '';
   inputLoginPin.blur();
 });
@@ -209,6 +254,11 @@ btnTransfer.addEventListener('click', e => {
     // doing the transfer
     currentAccount.movements.push(-amount);
     recieverAcc.movements.push(amount);
+
+    // add transfer Date
+    currentAccount.movementsDates.push(new Date());
+    recieverAcc.movementsDates.push(new Date());
+
     updateUI(currentAccount);
   }
 });
@@ -224,6 +274,11 @@ btnLoan.addEventListener('click', function (e) {
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // add movement
     currentAccount.movements.push(amount);
+
+    // add loan Date
+    currentAccount.movementsDates.push(new Date());
+    recieverAcc.movementsDates.push(new Date());
+
     // update UI
     updateUI(currentAccount);
   }
@@ -285,16 +340,6 @@ btnSort.addEventListener('click', function (e) {
 //   interestRate: 1.5,
 //   pin: 2222,
 
-//   movementsDates: [
-//     '2019-11-01T13:15:33.035Z',
-//     '2019-11-30T09:48:16.867Z',
-//     '2019-12-25T06:04:23.907Z',
-//     '2020-01-25T14:18:46.235Z',
-//     '2020-02-05T16:33:06.386Z',
-//     '2020-04-10T14:43:26.374Z',
-//     '2020-06-25T18:49:59.371Z',
-//     '2020-07-26T12:01:20.894Z',
-//   ],
 //   currency: 'USD',
 //   locale: 'en-US',
 // };
@@ -320,10 +365,6 @@ labelBalance.addEventListener('click', e => {
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
-const now = new Date();
-labelDate.textContent = `As of ${now.getDate().padStart(2, 0)}/${
-  now.getMonth().padStart(2, 0) + 1
-}/${now.getFullYear()}, ${now.getHours()}:${now.getMinutes()}`;
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
