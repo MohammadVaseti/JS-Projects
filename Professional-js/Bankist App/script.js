@@ -320,6 +320,10 @@ labelBalance.addEventListener('click', e => {
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
+const now = new Date();
+labelDate.textContent = `As of ${now.getDay()}/${
+  now.getMonth() + 1
+}/${now.getFullYear()}`;
 
 const currencies = new Map([
   ['USD', 'United States dollar'],
