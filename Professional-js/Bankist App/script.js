@@ -101,10 +101,12 @@ const calcDisplayMovements = function (acc, sort = false) {
     let type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const date = new Date(acc.movementsDates[i]);
-    const now = new Date();
-    const displayDate = `${date.getDate()}/${
-      date.getMonth() + 1
-    }/${now.getFullYear()}`;
+    // current Date
+    // const now = new Date();
+    const day = `${date.getDate()}`.padStart(2, '0');
+    const month = `${date.getMonth() + 1}`.padStart(2, '0');
+    const year = date.getFullYear();
+    const displayDate = `${day}/${month}/${year}`;
 
     const html = `<div class="movements__row">
     <div class="movements__type movements__type--${type}"> ${
@@ -217,20 +219,22 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome Back ${currentAccount.owner
       .split(' ')
       .at(0)} ❤`;
-    updateUI(currentAccount);
   }
-  // current Date
+  // create current Date
+
   const now = new Date();
   const day = `${now.getDate()}`.padStart(2, '0');
   const month = `${now.getMonth() + 1}`.padStart(2, '0');
   const year = now.getFullYear();
-  const hour = now.getHours();
-  const minute = now.getMinutes();
+  const hour = `${now.getHours()}`.padStart(2, '0');
+  const minute = `${now.getMinutes()}`.padStart(2, '0');
   labelDate.textContent = `${day}/${month}/${year},${hour}:${minute}`;
 
   // clear input fields
   inputLoginUsername.value = inputLoginPin.value = '';
   inputLoginPin.blur();
+
+  updateUI(currentAccount);
 });
 
 /////////////////////////////////////////////////
