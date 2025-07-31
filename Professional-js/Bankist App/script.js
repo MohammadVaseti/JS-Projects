@@ -221,9 +221,12 @@ btnLogin.addEventListener('click', function (e) {
   }
   // current Date
   const now = new Date();
-  labelDate.textContent = `${now.getDate()}/${
-    now.getMonth() + 1
-  }/${now.getFullYear()}, ${now.getHours()}:${now.getMinutes()}`;
+  const day = `${now.getDate()}`.padStart(2, '0');
+  const month = `${now.getMonth() + 1}`.padStart(2, '0');
+  const year = now.getFullYear();
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  labelDate.textContent = `${day}/${month}/${year},${hour}:${minute}`;
 
   // clear input fields
   inputLoginUsername.value = inputLoginPin.value = '';
