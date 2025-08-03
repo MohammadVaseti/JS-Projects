@@ -102,7 +102,7 @@ const formatMovementDate = function (date, locale) {
 const formatCur = function (value, locale, currency) {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency: 'USD',
+    currency: currency,
   }).format(value);
 };
 
