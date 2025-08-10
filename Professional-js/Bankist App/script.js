@@ -9,7 +9,7 @@
 
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
-prompt(`users & passcodes
+alert(`users & passcodes
   js : 1111
   jd :2222
 `);
