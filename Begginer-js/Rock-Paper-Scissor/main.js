@@ -56,9 +56,9 @@ btn.addEventListener("click", function () {
   cms.innerHTML = `compter = ${cmScore}`;
   yours.innerHTML = `you = ${yourScore}`;
 });
-// window.addEventListener("load", function () {
-//   cmScore = 0;
-//   yourScore = 0;
-//   localStorage.setItem("cmScore", cmScore);
-//   localStorage.setItem("yourScore", yourScore);
-// });
+window.addEventListener("load", function () {
+  cmScore = 0;
+  yourScore = 0;
+  localStorage.setItem("cmScore", cmScore);
+  localStorage.setItem("yourScore", yourScore);
+});
