@@ -1,46 +1,4 @@
-// "use strict";
-// // elements
-// const choices = ["rock", "paper", "scissors"];
-
-// const btn = document.querySelector("button");
-// const input = document.querySelector(".input");
-
-// let cmScore = 0;
-// let yourScore = 0;
-
-// btn.addEventListener("click", function () {
-//   const randNum = Math.floor(Math.random() * 3);
-//   let cmChoice = choices[randNum];
-//   console.log(cmChoice);
-
-//   if (input.value === cmChoice) {
-//     console.log("draw");
-//   }
-//   // ////////////
-//   else if (cmChoice === "rock" && input.value === "scissors") {
-//     ++cmScore;
-//     console.log("cm win", cmScore);
-//   } else if (cmChoice === "rock" && input.value === "paper") {
-//     ++yourScore;
-//     console.log("you win", yourScore);
-//   }
-//   // /////////////
-//   else if (cmChoice === "scissors" && input.value === "rock") {
-//     ++yourScore;
-//     console.log("you win", yourScore);
-//   } else if (cmChoice === "scissors" && input.value === "paper") {
-//     ++cmScore;
-//     console.log("cm win", cmScore);
-//   }
-//   // ///////////////////
-//   else if (cmChoice === "paper" && input.value === "rock") {
-//     ++cmScore;
-//     console.log("cm win", cmScore);
-//   } else if (cmChoice === "paper" && input.value === "scissors") {
-//     ++yourScore;
-//     console.log("you win", yourScore);
-//   }
-// });
+"use strict";
 
 /////////////////////////////////////////////////////////////////////
 
