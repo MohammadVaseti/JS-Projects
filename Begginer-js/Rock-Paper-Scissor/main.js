@@ -1,8 +1,9 @@
 "use strict";
+// game Choices
 const choices = ["rock", "paper", "scissors"];
 const randomNum1 = Math.floor(Math.random() * 3);
 const randomNum2 = Math.floor(Math.random() * 3);
-
+// random Choice
 const player1 = choices[randomNum1];
 const player2 = choices[randomNum2];
 
