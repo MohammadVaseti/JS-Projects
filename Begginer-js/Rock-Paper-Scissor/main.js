@@ -6,7 +6,7 @@ const randomNum2 = Math.floor(Math.random() * 3);
 // random Choice
 const player1 = choices[randomNum1];
 const player2 = choices[randomNum2];
-console.log(player1, player2);
+console.log(`player1 is ${player1} player2 is ${player2}`);
 
 // game Logic
 if (player1 === player2) {
