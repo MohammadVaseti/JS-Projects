@@ -17,3 +17,10 @@ body {
   background-color: yellowgreen;
   padding: 20%;
 }
+.rows {
+  display: flex;
+}
+
+button {
+  padding: 20%;
+}
