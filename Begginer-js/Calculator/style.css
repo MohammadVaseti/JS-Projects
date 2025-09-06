@@ -13,4 +13,7 @@ body {
 }
 
 .container {
+  margin-top: 8%;
+  background-color: yellowgreen;
+  padding: 20%;
 }
