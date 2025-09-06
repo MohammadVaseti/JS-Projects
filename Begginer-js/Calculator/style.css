@@ -15,12 +15,13 @@ body {
 .container {
   margin-top: 8%;
   background-color: yellowgreen;
-  padding: 20%;
+  width: 600px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
 }
 .rows {
-  display: flex;
-}
-
-button {
-  padding: 20%;
+  width: 100%;
+  margin: 5px;
+  background-color: red;
 }
