@@ -47,9 +47,7 @@ button {
   aspect-ratio: 1/1;
   border: none;
   outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 12px;
 }
 button:hover {
   cursor: pointer;
@@ -58,6 +56,6 @@ button:hover {
   color: white;
 }
 .equal {
-  background-color: orangered;
+  background-color: red;
   color: white;
 }
