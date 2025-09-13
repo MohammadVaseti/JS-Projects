@@ -36,4 +36,14 @@ body {
   cursor: no-drop;
 }
 .buttons {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+button {
+  aspect-ratio: 1/1;
+}
+.equal {
+  background-color: orangered;
 }
