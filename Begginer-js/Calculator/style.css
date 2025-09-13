@@ -30,8 +30,9 @@ body {
 }
 .display {
   width: 90%;
-  padding: 5%;
-  font-size: 20px;
+  padding: 15px;
+  min-height: 60px;
+  font-size: 28px;
   text-align: right;
   cursor: no-drop;
 }
@@ -40,15 +41,19 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
+  font-size: 18px;
 }
 button {
   aspect-ratio: 1/1;
   border: none;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button:hover {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   background-color: orangered;
   color: white;
 }
