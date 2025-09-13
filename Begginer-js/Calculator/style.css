@@ -46,6 +46,13 @@ button {
   border: none;
   outline: none;
 }
+button:hover {
+  cursor: pointer;
+  font-size: 18px;
+  background-color: orangered;
+  color: white;
+}
 .equal {
   background-color: orangered;
+  color: white;
 }
