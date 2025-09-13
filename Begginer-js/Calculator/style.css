@@ -43,6 +43,8 @@ body {
 }
 button {
   aspect-ratio: 1/1;
+  border: none;
+  outline: none;
 }
 .equal {
   background-color: orangered;
