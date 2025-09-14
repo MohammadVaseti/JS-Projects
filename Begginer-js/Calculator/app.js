@@ -5,7 +5,7 @@ const btns = document.querySelectorAll("button");
 console.log(btns);
 const display = document.querySelector(".display");
 console.log(display);
-let check = true;
+const c_btn = document.querySelector(".c-btn");
 // ///////////////////////
 
 btns.forEach((element) => {
@@ -17,4 +17,8 @@ btns.forEach((element) => {
       display.innerHTML += button;
     }
   });
+});
+
+c_btn.addEventListener("click", (e) => {
+  display.innerHTML = 0;
 });
