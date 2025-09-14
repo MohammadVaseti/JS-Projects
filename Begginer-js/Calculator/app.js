@@ -9,6 +9,10 @@ console.log(display);
 
 btns.forEach((element) => {
   element.addEventListener("click", (e) => {
-    display.innerHTML += e.target.textContent;
+    let button = e.target.innerHTML;
+    if (button === "=" || button === "C" || button === "⌫") return;
+    else {
+      display.innerHTML += button;
+    }
   });
 });
