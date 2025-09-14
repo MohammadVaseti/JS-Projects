@@ -6,6 +6,8 @@ console.log(btns);
 const display = document.querySelector(".display");
 console.log(display);
 const c_btn = document.querySelector(".c-btn");
+const earase = document.querySelector(".earase");
+console.log(earase);
 // ///////////////////////
 
 btns.forEach((element) => {
@@ -14,11 +16,23 @@ btns.forEach((element) => {
     if (button === "=" || button === "C" || button === "⌫") {
       return;
     } else {
-      display.innerHTML += button;
+      if (display.innerHTML == "0") {
+        display.innerHTML = button;
+      } else {
+        display.innerHTML += button;
+      }
     }
   });
 });
 
 c_btn.addEventListener("click", (e) => {
   display.innerHTML = 0;
+});
+
+earase.addEventListener("click", (e) => {
+  if (display.innerHTML.length == 1) {
+    display.innerHTML = 0;
+  } else {
+    display.innerHTML = display.innerHTML.slice(0, -1);
+  }
 });
