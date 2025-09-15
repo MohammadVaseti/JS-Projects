@@ -65,15 +65,15 @@ equal.addEventListener("click", (e) => {
   console.log(num1, num2);
   if (operator == "+") {
     let result = num1 + num2;
-    console.log(result);
+    display.innerHTML = result;
   } else if (operator == "-") {
     let result = num1 - num2;
-    console.log(result);
+    display.innerHTML = result;
   } else if (operator == "×") {
     let result = num1 * num2;
-    console.log(result);
+    display.innerHTML = result;
   } else if (operator == "÷") {
     let result = num1 / num2;
-    console.log(result);
+    display.innerHTML = result;
   }
 });
