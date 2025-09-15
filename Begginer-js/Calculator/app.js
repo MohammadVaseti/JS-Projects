@@ -16,6 +16,8 @@ const equal = document.querySelector(".equal");
 console.log(equal);
 
 let num1 = null;
+let num2 = null;
+let operator = null;
 
 // ///////////////////////
 
@@ -49,7 +51,29 @@ earase.addEventListener("click", (e) => {
 operators.forEach((e) => {
   e.addEventListener("click", () => {
     // console.log(e.innerHTML);
+    operator = display.innerHTML.at(-1);
     num1 = +display.innerHTML.slice(0, -1);
     display.innerHTML = "0";
   });
+});
+
+equal.addEventListener("click", (e) => {
+  num2 = +display.innerHTML;
+  console.log(num2);
+  display.innerHTML = "0";
+  console.log(operator);
+  console.log(num1, num2);
+  if (operator == "+") {
+    let result = num1 + num2;
+    console.log(result);
+  } else if (operator == "-") {
+    let result = num1 - num2;
+    console.log(result);
+  } else if (operator == "×") {
+    let result = num1 * num2;
+    console.log(result);
+  } else if (operator == "÷") {
+    let result = num1 / num2;
+    console.log(result);
+  }
 });
