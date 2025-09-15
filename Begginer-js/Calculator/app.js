@@ -12,6 +12,9 @@ console.log(earase);
 const operators = document.querySelectorAll(".operator");
 console.log(operators);
 
+const equal = document.querySelector(".equal");
+console.log(equal);
+
 let num1 = null;
 
 // ///////////////////////
@@ -46,9 +49,7 @@ earase.addEventListener("click", (e) => {
 operators.forEach((e) => {
   e.addEventListener("click", () => {
     // console.log(e.innerHTML);
-    if (display.innerHTML.includes(e.innerHTML)) {
-      num1 = +display.innerHTML.slice(0, -1);
-      console.log(num1);
-    }
+    num1 = +display.innerHTML.slice(0, -1);
+    display.innerHTML = "0";
   });
 });
