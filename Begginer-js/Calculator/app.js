@@ -8,6 +8,12 @@ console.log(display);
 const c_btn = document.querySelector(".c-btn");
 const earase = document.querySelector(".earase");
 console.log(earase);
+
+const operators = document.querySelectorAll(".operator");
+console.log(operators);
+
+let num1 = null;
+
 // ///////////////////////
 
 btns.forEach((element) => {
@@ -35,4 +41,14 @@ earase.addEventListener("click", (e) => {
   } else {
     display.innerHTML = display.innerHTML.slice(0, -1);
   }
+});
+
+operators.forEach((e) => {
+  e.addEventListener("click", () => {
+    // console.log(e.innerHTML);
+    if (display.innerHTML.includes(e.innerHTML)) {
+      num1 = +display.innerHTML.slice(0, -1);
+      console.log(num1);
+    }
+  });
 });
