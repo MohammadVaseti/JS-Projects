@@ -18,6 +18,7 @@ console.log(equal);
 let num1 = null;
 let num2 = null;
 let operator = null;
+let result = null;
 
 // ///////////////////////
 
@@ -38,6 +39,9 @@ btns.forEach((element) => {
 
 c_btn.addEventListener("click", (e) => {
   display.innerHTML = 0;
+  num1 = 0;
+  num2 = 0;
+  result = 0;
 });
 
 earase.addEventListener("click", (e) => {
@@ -53,12 +57,12 @@ operators.forEach((e) => {
     // console.log(e.innerHTML);
     operator = display.innerHTML.at(-1);
     num1 = +display.innerHTML.slice(0, -1);
-    display.innerHTML = "0";
   });
 });
 
 equal.addEventListener("click", (e) => {
-  num2 = +display.innerHTML;
+  num2 = +display.innerHTML.slice(0, -1);
+
   console.log(num2);
   display.innerHTML = "0";
   console.log(operator);
