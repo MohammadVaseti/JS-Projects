@@ -53,10 +53,11 @@ earase.addEventListener("click", (e) => {
 });
 
 operators.forEach((e) => {
-  e.addEventListener("click", () => {
+  e.addEventListener("click", (op) => {
     // console.log(e.innerHTML);
-    operator = display.innerHTML.at(-1);
+    operator = op.target.innerHTML;
     num1 = +display.innerHTML.slice(0, -1);
+    console.log(num1);
   });
 });
 
