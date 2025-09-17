@@ -25,7 +25,13 @@ let result = null;
 btns.forEach((element) => {
   element.addEventListener("click", (e) => {
     let button = e.target.innerHTML;
-    if (button === "=" || button === "C" || button === "⌫") {
+    if (
+      (display.innerHTML === "0" && button === "=") ||
+      button === "C" ||
+      button === "⌫" ||
+      button == "×" ||
+      button == "÷"
+    ) {
       return;
     } else {
       if (display.innerHTML == "0") {
@@ -54,10 +60,9 @@ earase.addEventListener("click", (e) => {
 
 operators.forEach((e) => {
   e.addEventListener("click", (op) => {
-    // console.log(e.innerHTML);
+    console.log(e.innerHTML);
     operator = op.target.innerHTML;
     num1 = +display.innerHTML.slice(0, -1);
-    console.log(num1);
   });
 });
 
