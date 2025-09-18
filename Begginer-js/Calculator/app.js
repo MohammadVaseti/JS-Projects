@@ -26,11 +26,11 @@ btns.forEach((element) => {
   element.addEventListener("click", (e) => {
     let button = e.target.innerHTML;
     if (
-      (display.innerHTML === "0" && button === "=") ||
+      (display.innerHTML == "0" && button === "=") ||
       button === "C" ||
       button === "⌫" ||
-      button == "×" ||
-      button == "÷"
+      button === "×" ||
+      button === "÷"
     ) {
       return;
     } else {
@@ -60,9 +60,12 @@ earase.addEventListener("click", (e) => {
 
 operators.forEach((e) => {
   e.addEventListener("click", (op) => {
-    console.log(e.innerHTML);
     operator = op.target.innerHTML;
+    if (operator == "×" || operator == "÷") {
+      display.innerHTML += operator;
+    }
     num1 = +display.innerHTML.slice(0, -1);
+    console.log(num1);
   });
 });
 
