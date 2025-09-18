@@ -71,25 +71,3 @@ operators.forEach((e) => {
     console.log(num1);
   });
 });
-
-equal.addEventListener("click", (e) => {
-  num2 = +display.innerHTML.slice(0, -1);
-
-  console.log(num2);
-  display.innerHTML = "0";
-  console.log(operator);
-  console.log(num1, num2);
-  if (operator == "+") {
-    let result = num1 + num2;
-    display.innerHTML = result;
-  } else if (operator == "-") {
-    let result = num1 - num2;
-    display.innerHTML = result;
-  } else if (operator == "×") {
-    let result = num1 * num2;
-    display.innerHTML = result;
-  } else if (operator == "÷") {
-    let result = num1 / num2;
-    display.innerHTML = result;
-  }
-});
