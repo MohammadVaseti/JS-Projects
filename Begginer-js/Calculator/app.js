@@ -41,33 +41,30 @@ earase.addEventListener("click", (e) => {
 btns.forEach((element) => {
   element.addEventListener("click", (e) => {
     let button = e.target.innerHTML;
-
     if (
-      (display.innerHTML == "0" && button === "=") ||
-      button === "C" ||
-      button === "⌫" ||
-      button === "×" ||
-      button === "÷"
+      (display.innerHTML === "0" &&
+        display.innerHTML.length == 1 &&
+        button == "×") ||
+      button == "÷" ||
+      button == "⌫" ||
+      button == "C" ||
+      button == "="
     ) {
       return;
     } else {
-      if (display.innerHTML == "0") {
-        display.innerHTML = button;
-      } else {
-        display.innerHTML += button;
-      }
+      display.innerHTML += button;
     }
   });
 });
 
-operators.forEach((e) => {
-  e.addEventListener("click", (op) => {
-    operator = op.target.innerHTML;
+// operators.forEach((e) => {
+//   e.addEventListener("click", (op) => {
+//     operator = op.target.innerHTML;
 
-    if (operator == "×" || operator == "÷") {
-      display.innerHTML += operator;
-    }
-    num1 = +display.innerHTML.slice(0, -1);
-    console.log(num1);
-  });
-});
+//     if (operator == "×" || operator == "÷") {
+//       display.innerHTML += operator;
+//     }
+//     num1 = +display.innerHTML.slice(0, -1);
+//     console.log(num1);
+//   });
+// });
