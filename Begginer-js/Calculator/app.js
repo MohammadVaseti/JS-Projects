@@ -36,7 +36,7 @@ earase.addEventListener("click", (e) => {
     display.innerHTML = display.innerHTML.slice(0, -1);
   }
 });
-// ///////////////////////
+/////////////////////////
 
 btns.forEach((element) => {
   element.addEventListener("click", (e) => {
