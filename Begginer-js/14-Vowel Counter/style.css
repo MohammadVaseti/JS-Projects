@@ -20,7 +20,7 @@ body {
   max-width: 600px;
   width: 90%;
   border: 2px solid black;
-  height: auto;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,17 +30,23 @@ body {
   margin-top: 30px;
 }
 textarea {
+  font-size: 15px;
+
   height: 120px;
-  background-color: rgb(171, 124, 107);
+  background-color: rgb(251, 170, 140);
   color: black;
   text-align: center;
   width: 60%;
   cursor: pointer;
+  color: white;
 }
 textarea:focus {
   font-size: 18px;
   padding: 13px;
-  background-color: rgb(222, 136, 136);
+  background-color: rgb(127, 147, 237);
+  border: none;
+  outline: none;
+  color: white;
 }
 .btn {
   padding: 10px;
