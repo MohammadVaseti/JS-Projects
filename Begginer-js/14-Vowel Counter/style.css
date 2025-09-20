@@ -28,6 +28,7 @@ body {
   gap: 15px;
   border-radius: 20px;
   margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 textarea {
   font-size: 15px;
@@ -39,11 +40,12 @@ textarea {
   width: 60%;
   cursor: pointer;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 textarea:focus {
   font-size: 18px;
   padding: 13px;
-  background-color: rgb(127, 147, 237);
+  background-color: rgb(238, 89, 9);
   border: none;
   outline: none;
   color: white;
