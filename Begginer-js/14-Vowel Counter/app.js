@@ -3,3 +3,21 @@
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".result");
+let word = document.querySelector(".word");
+let counter = 0;
+
+// const func = function (text) {
+//   return
+// };
+
+btn.addEventListener("click", (e) => {
+  let text = input.value.toLowerCase();
+  for (let i = 0; i <= text.length; i++) {
+    if (text[i] == "a" || text[i] == "i" || text[i] == "o" || text[i] == "e") {
+      counter++;
+      result.innerHTML = counter;
+      word.innerHTML += ` ${text[i]}`;
+    }
+  }
+  input.value = "";
+});
