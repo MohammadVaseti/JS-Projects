@@ -6,18 +6,17 @@
 
 **This Repository Contains My Begginer JavaScript Projects**
 
-1. ### Drum Kit : _By Click On Your Keyboard You Can Hear Specific Tone_
-2. ### Guess My Numeber : _a Simple Game You Can Play and Enjoy_
-3. ### Rock Paper Scissors : _Back to Your Childhood With This Nostalgic Game_
-4. ### RGB-Range : _You Can Create Your Own RGB Color_
-5. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
-6. ### Digital Clock : _a Simple Clock To Check The Time_
-7. ### BMI : _Calculate BMI of Your Body_
-8. ### Random-Password : _Generate New Password For Yourself_
-9. ### Modal : _Simple Modal_
-10. ### RND BG Color : _Random Background Color_
-11.  ### Lightbulb : _Turn on The Lightbulb_
-12. ### todo : _Simple todo List_
-13. ### Pig Game: _a Simple Game You Can Play and Enjoy_
-14. ### Picture Shower: _Give me Link of Your Picture i Will Show it_
-15. ### Vowel Counter: _Enter Your Text I Count Vowels_
+1. ### BMI : _Calculate BMI of Your Body_
+2. ### Jonas-Guess My Numeber : _a Simple Game You Can Play and Enjoy_
+3. ### Jonas-Pig Game: _a Simple Game You Can Play and Enjoy_
+4. ### Lightbulb : _Turn on The Lightbulb_
+5. ### Modal Window : _Simple Modal_
+6. ### RND BG Color : _Random Background Color_
+7. ### Random-Password : _Generate New Password For Yourself_
+8. ### RGB-Range : _You Can Create Your Own RGB Color_
+9. ### Rock Paper Scissors : _Back to Your Childhood With This Nostalgic Game_
+10. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
+11. ### Picture Shower: _Give me Link of Your Picture i Will Show it_
+12. ### Drum Kit : _By Click On Your Keyboard You Can Hear Specific Tone_
+13. ### todo : _Simple todo List_
+14. ### Vowel Counter: _Enter Your Text I Count Vowels_
