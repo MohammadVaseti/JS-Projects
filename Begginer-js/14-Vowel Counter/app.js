@@ -4,11 +4,15 @@ const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
 const result = document.querySelector(".result");
 let word = document.querySelector(".word");
+const reset = document.querySelector(".reset");
 let counter = 0;
 
 // / app logic
 btn.addEventListener("click", (e) => {
   let text = input.value.toLowerCase();
+  if (text.trim() == "") {
+    alert("input is empty");
+  }
   for (let i = 0; i <= text.length - 1; i++) {
     if (
       text[i] == "a" ||
@@ -23,4 +27,9 @@ btn.addEventListener("click", (e) => {
     }
   }
   input.value = "";
+});
+reset.addEventListener("click", (e) => {
+  counter = 0;
+  result.innerHTML = "Result";
+  word.innerHTML = "Vowels are";
 });

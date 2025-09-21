@@ -50,7 +50,8 @@ textarea:focus {
   outline: none;
   color: white;
 }
-.btn {
+.btn,
+.reset {
   padding: 10px;
   border: none;
   border-radius: 20px;
