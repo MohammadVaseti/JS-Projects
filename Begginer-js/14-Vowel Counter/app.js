@@ -12,7 +12,7 @@ let counter = 0;
 
 btn.addEventListener("click", (e) => {
   let text = input.value.toLowerCase();
-  for (let i = 0; i <= text.length; i++) {
+  for (let i = 0; i <= text.length - 1; i++) {
     if (
       text[i] == "a" ||
       text[i] == "i" ||
@@ -20,9 +20,9 @@ btn.addEventListener("click", (e) => {
       text[i] == "e" ||
       text[i] == "u"
     ) {
+      word.innerHTML += ` ${text[i]}`;
       counter++;
       result.innerHTML = counter;
-      word.innerHTML += ` ${text[i]}`;
     }
   }
   input.value = "";
