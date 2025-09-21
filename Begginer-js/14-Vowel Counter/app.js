@@ -13,7 +13,13 @@ let counter = 0;
 btn.addEventListener("click", (e) => {
   let text = input.value.toLowerCase();
   for (let i = 0; i <= text.length; i++) {
-    if (text[i] == "a" || text[i] == "i" || text[i] == "o" || text[i] == "e") {
+    if (
+      text[i] == "a" ||
+      text[i] == "i" ||
+      text[i] == "o" ||
+      text[i] == "e" ||
+      text[i] == "u"
+    ) {
       counter++;
       result.innerHTML = counter;
       word.innerHTML += ` ${text[i]}`;
