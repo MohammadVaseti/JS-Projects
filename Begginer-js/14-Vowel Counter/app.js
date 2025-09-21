@@ -6,10 +6,7 @@ const result = document.querySelector(".result");
 let word = document.querySelector(".word");
 let counter = 0;
 
-// const func = function (text) {
-//   return
-// };
-
+// / app logic
 btn.addEventListener("click", (e) => {
   let text = input.value.toLowerCase();
   for (let i = 0; i <= text.length - 1; i++) {
