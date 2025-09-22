@@ -46,3 +46,6 @@ input {
   outline: none;
   border-radius: 14px;
 }
+p {
+  font-size: 20px;
+}
