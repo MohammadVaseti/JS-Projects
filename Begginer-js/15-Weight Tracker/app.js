@@ -8,7 +8,7 @@ const weightArr = [];
 console.log(result);
 
 btn.addEventListener("click", () => {
-  let t = new Date();
+  let now = new Date();
 
   if (input.value == "") {
     alert("Please Fill The Input");
@@ -16,7 +16,6 @@ btn.addEventListener("click", () => {
   const para = document.createElement("p");
   para.innerText = input.value;
   list.appendChild(para);
-  input.value = "";
-  weightArr.push({ weight: input.value, time: t.getDate() });
-  console.log(weightArr);
+  weightArr.push({ weight: input.value, time: now });
+  localStorage.setItem("weight", JSON.stringify(weightArr));
 });
