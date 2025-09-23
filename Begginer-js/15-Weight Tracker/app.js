@@ -16,6 +16,8 @@ btn.addEventListener("click", () => {
   const para = document.createElement("p");
   para.innerText = input.value;
   list.appendChild(para);
-  weightArr.push({ weight: input.value, time: now });
+  let obj = { weight: input.value, time: now };
+  weightArr.push(obj);
   localStorage.setItem("weight", JSON.stringify(weightArr));
+  result.innerHTML += `weight : ${input.value} time : ${now}`;
 });
