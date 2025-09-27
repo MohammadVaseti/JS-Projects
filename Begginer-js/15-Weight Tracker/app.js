@@ -21,12 +21,11 @@ savedWeights.forEach((item) => {
 btn.addEventListener("click", () => {
   let now = new Date();
 
-  if (input.value == "") {
+  if (input.value.trim() === "") {
     alert("Please Fill The Input");
+    return;
   }
-  const para = document.createElement("p");
-  para.innerText = input.value;
-  list.appendChild(para);
+
   let obj = { weight: input.value, time: now.getTime() };
   weightArr.push(obj);
   localStorage.setItem("weight", JSON.stringify(weightArr));
