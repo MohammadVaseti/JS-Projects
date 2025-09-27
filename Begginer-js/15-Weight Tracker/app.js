@@ -9,7 +9,7 @@ console.log(result);
 const savedWeights = JSON.parse(localStorage.getItem("weight")) || [];
 const weightArr = savedWeights;
 
-// نمایش داده‌های ذخیره‌شده
+//
 savedWeights.forEach((item) => {
   const li = document.createElement("li");
   li.innerText = `Weight: ${item.weight} - Time: ${new Date(
