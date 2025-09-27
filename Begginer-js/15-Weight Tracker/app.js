@@ -9,7 +9,7 @@ console.log(result);
 const savedWeights = JSON.parse(localStorage.getItem("weight")) || [];
 const weightArr = savedWeights;
 
-//
+// show data
 savedWeights.forEach((item) => {
   const li = document.createElement("li");
   li.innerText = `Weight: ${item.weight} - Time: ${new Date(
@@ -32,6 +32,6 @@ btn.addEventListener("click", () => {
   localStorage.setItem("weight", JSON.stringify(weightArr));
 
   const li = document.createElement("li");
-  li.innerText = `Weight: ${input.value} - Time: ${now.toLocaleString()}`;
+  li.innerText = `Weight: ${input.value} --- Time: ${now.toLocaleString()}`;
   result.appendChild(li);
 });
