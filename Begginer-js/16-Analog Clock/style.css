@@ -8,4 +8,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #000a24;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 10, 36, 1) 0%,
+    rgba(9, 117, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.container {
+  background-color: white;
+  padding: 5% 6.9%;
+  border: 2px solid black;
+  border-radius: 50%;
 }
