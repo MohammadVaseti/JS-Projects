@@ -36,6 +36,7 @@ body {
   border-radius: 50%;
   border: none;
   outline: none;
+  z-index: 3;
 }
 .hour {
   position: absolute;
@@ -47,10 +48,11 @@ body {
   top: 50%;
   transform: translate(-50%, -100%) rotate(5deg);
   transform-origin: bottom center;
+  z-index: 1;
 }
 .second {
   position: absolute;
-  width: 4px;
+  width: 2px;
   height: 46%;
   background-color: rgb(187, 22, 22);
   border-radius: 25px;
@@ -58,6 +60,7 @@ body {
   top: 50%;
   transform: translate(-50%, -100%) rotate(94deg);
   transform-origin: bottom center;
+  z-index: 1;
 }
 .minute {
   position: absolute;
@@ -69,4 +72,5 @@ body {
   top: 50%;
   transform: translate(-50%, -100%) rotate(183deg);
   transform-origin: bottom center;
+  z-index: 1;
 }
