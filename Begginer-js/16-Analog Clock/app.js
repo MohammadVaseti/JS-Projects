@@ -4,6 +4,7 @@ const sec = document.querySelector(".second");
 const min = document.querySelector(".minute");
 const hour = document.querySelector(".hour");
 
+// app logics
 setInterval(() => {
   const time = new Date();
   sec.style.transform = `translate(-50% , -100%) rotate(${
