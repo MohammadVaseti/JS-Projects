@@ -4,5 +4,30 @@
   box-sizing: border-box;
 }
 body {
-  background-color: red;
+  height: 100vh;
+  background: #000a24;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 10, 36, 1) 0%,
+    rgba(9, 117, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+h1 {
+  margin: 10%;
+  width: 50%;
+  color: white;
+}
+.container {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding: 15px;
 }
