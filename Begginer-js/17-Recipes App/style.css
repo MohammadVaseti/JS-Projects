@@ -13,21 +13,18 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-h1 {
-  margin: 10%;
-  width: 50%;
-  color: white;
-}
-.container {
-  width: 50%;
-  height: 400px;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+h1 {
+  color: white;
+  margin: 0.5%;
+}
+.input {
+  margin: 1%;
+}
+
 input {
   padding: 15px;
 }
@@ -35,10 +32,14 @@ button {
   padding: 15px;
   border: none;
   outline: none;
-  margin-left: 2%;
 }
 button:hover {
   background-color: blueviolet;
   color: white;
   transition: all 1s ease-in-out;
+}
+.result {
+  width: 50%;
+  height: 400px;
+  background-color: white;
 }
