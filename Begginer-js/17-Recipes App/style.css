@@ -53,7 +53,7 @@ button:hover {
   border-radius: 8px;
 }
 .result {
-  width: 50%;
+  width: 65%;
   height: 400px;
   background-color: white;
   overflow-y: auto;
