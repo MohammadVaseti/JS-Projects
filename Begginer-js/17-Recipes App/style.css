@@ -31,3 +31,14 @@ h1 {
 input {
   padding: 15px;
 }
+button {
+  padding: 15px;
+  border: none;
+  outline: none;
+  margin-left: 2%;
+}
+button:hover {
+  background-color: blueviolet;
+  color: white;
+  transition: all 1s ease-in-out;
+}
