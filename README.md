@@ -4,7 +4,10 @@
 >
 > ![image](https://github.com/user-attachments/assets/73335949-0564-409e-9262-5d2d53c39c7e)
 
-**This Repository Contains My Begginer JavaScript Projects**
+**This Repository Contains My JavaScript Projects**
+
+### Beginner projects
+
 
 1. ### BMI : _Calculate BMI of Your Body_
 2. ### Jonas-Guess My Numeber : _a Simple Game You Can Play and Enjoy_
