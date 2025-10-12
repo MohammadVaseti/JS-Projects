@@ -26,8 +26,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  height: 35%;
+  width: 40%;
+  height: 45%;
   border-radius: 25px;
   animation: bg 5s infinite;
   color: white;
@@ -64,4 +64,18 @@ body {
 h1 {
   color: rgb(234, 85, 85);
   margin: 1%;
+}
+span {
+  margin: 2%;
+}
+button {
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 15px;
+  margin-top: 5%;
+}
+.container-2 {
+  width: 100%;
+  text-align: center;
 }
