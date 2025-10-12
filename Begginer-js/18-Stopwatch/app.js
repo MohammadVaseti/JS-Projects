@@ -9,12 +9,11 @@ const start = document.querySelector(".start");
 const pause = document.querySelector(".pause");
 const reset = document.querySelector(".reset");
 
-const hourNum = 0;
-const minNum = 0;
-const secNum = 0;
+let hourNum = 0;
+let minNum = 0;
+let secNum = 0;
 
 // logic
-
 // reset button
 reset.addEventListener("click", (e) => {
   hour.innerHTML = "00";
@@ -22,5 +21,4 @@ reset.addEventListener("click", (e) => {
   sec.innerHTML = "00";
 });
 
-// start button
-start.addEventListener;
+// Start Function
