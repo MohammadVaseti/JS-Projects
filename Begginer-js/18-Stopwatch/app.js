@@ -12,6 +12,8 @@ const reset = document.querySelector(".reset");
 let hourNum = 0;
 let minNum = 0;
 let secNum = 0;
+let timer = null;
+console.log(timer);
 
 // logic
 // reset button
@@ -20,11 +22,8 @@ reset.addEventListener("click", (e) => {
   min.innerHTML = "00";
   sec.innerHTML = "00";
 });
-
-// Start Function
-
-start.addEventListener("click", (e) => {
-  let timer = setInterval(() => {
+const time = function () {
+  timer = setInterval(() => {
     if (secNum == 59) {
       minNum++;
       min.innerHTML = String(minNum).padStart(2, "0");
@@ -37,4 +36,19 @@ start.addEventListener("click", (e) => {
     secNum++;
     sec.innerHTML = String(secNum).padStart(2, "0");
   }, 1000);
+};
+// Start Function
+
+start.addEventListener("click", (e) => {
+  time();
+});
+
+reset.addEventListener("click", (e) => {
+  clearInterval(timer);
+  secNum = 0;
+  minNum = 0;
+  hourNum = 0;
+  sec.innerHTML == "00";
+  min.innerHTML == "00";
+  hour.innerHTML == "00";
 });
