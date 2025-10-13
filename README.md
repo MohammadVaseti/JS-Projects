@@ -25,5 +25,5 @@
 14. ### Vowel Counter: _Enter Your Text_
 15. ### Weight Tracker: _an appication to save your weight an analyzing it_
 16. ### Analog Clock: _a Beautiful Clock That Shows Current Time_
-17. ### Recipes App: _Search Foods and Get The
+17. ### Recipes App: _Search Foods and Get The Recipe_
 18. ### Stopwatch: _Simple Stopwatch With Start,Reset,Pause Buttons_
