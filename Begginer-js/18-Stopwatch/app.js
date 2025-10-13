@@ -16,12 +16,7 @@ let timer = null;
 console.log(timer);
 
 // logic
-// reset button
-reset.addEventListener("click", (e) => {
-  hour.innerHTML = "00";
-  min.innerHTML = "00";
-  sec.innerHTML = "00";
-});
+
 const time = function () {
   timer = setInterval(() => {
     if (secNum == 59) {
@@ -47,8 +42,8 @@ reset.addEventListener("click", (e) => {
   secNum = 0;
   minNum = 0;
   hourNum = 0;
-  sec.innerHTML == "00";
-  min.innerHTML == "00";
-  hour.innerHTML == "00";
+  sec.innerHTML = "00";
+  min.innerHTML = "00";
+  hour.innerHTML = "00";
 });
 // pause Button
