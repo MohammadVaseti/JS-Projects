@@ -29,6 +29,10 @@ start.addEventListener("click", (e) => {
       minNum++;
       min.innerHTML = String(minNum).padStart(2, "0");
       secNum = 0;
+    } else if (minNum == 59) {
+      hourNum++;
+      hour.innerHTML = String(hourNum).padStart(2, "0");
+      minNum = 0;
     }
     secNum++;
     sec.innerHTML = String(secNum).padStart(2, "0");
