@@ -25,7 +25,11 @@ reset.addEventListener("click", (e) => {
 
 start.addEventListener("click", (e) => {
   let timer = setInterval(() => {
-    if(secNum==){}
+    if (secNum == 59) {
+      minNum++;
+      min.innerHTML = String(minNum).padStart(2, "0");
+      secNum = 0;
+    }
     secNum++;
     sec.innerHTML = String(secNum).padStart(2, "0");
   }, 1000);
