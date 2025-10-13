@@ -37,12 +37,11 @@ const time = function () {
     sec.innerHTML = String(secNum).padStart(2, "0");
   }, 1000);
 };
-// Start Function
-
+// Start Button
 start.addEventListener("click", (e) => {
   time();
 });
-
+// reset Button
 reset.addEventListener("click", (e) => {
   clearInterval(timer);
   secNum = 0;
@@ -52,3 +51,4 @@ reset.addEventListener("click", (e) => {
   min.innerHTML == "00";
   hour.innerHTML == "00";
 });
+// pause Button
