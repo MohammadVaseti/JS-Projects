@@ -22,3 +22,11 @@ reset.addEventListener("click", (e) => {
 });
 
 // Start Function
+
+start.addEventListener("click", (e) => {
+  let timer = setInterval(() => {
+    if(secNum==){}
+    secNum++;
+    sec.innerHTML = String(secNum).padStart(2, "0");
+  }, 1000);
+});
