@@ -47,3 +47,6 @@ reset.addEventListener("click", (e) => {
   hour.innerHTML = "00";
 });
 // pause Button
+pause.addEventListener("click", (e) => {
+  clearInterval(timer);
+});
