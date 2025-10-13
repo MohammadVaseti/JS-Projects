@@ -34,7 +34,11 @@ const time = function () {
 };
 // Start Button
 start.addEventListener("click", (e) => {
-  time();
+  if (timer === null) {
+    time();
+  } else {
+    return;
+  }
 });
 // reset Button
 reset.addEventListener("click", (e) => {
@@ -45,8 +49,10 @@ reset.addEventListener("click", (e) => {
   sec.innerHTML = "00";
   min.innerHTML = "00";
   hour.innerHTML = "00";
+  timer = null;
 });
 // pause Button
 pause.addEventListener("click", (e) => {
   clearInterval(timer);
+  timer = null;
 });
