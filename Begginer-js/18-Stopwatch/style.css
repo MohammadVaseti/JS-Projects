@@ -10,13 +10,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #3fd126;
+  background: #020024;
   background: linear-gradient(
     90deg,
-    rgba(63, 209, 38, 1) 0%,
-    rgba(149, 240, 31, 1) 35%,
-    rgba(13, 255, 45, 1) 54%,
-    rgba(34, 255, 0, 1) 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
   );
 }
 
