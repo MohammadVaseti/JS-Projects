@@ -54,3 +54,7 @@ body {
     rgba(241, 238, 238, 0.17) 0px 12px 13px,
     rgba(232, 228, 228, 0.09) 0px -3px 5px;
 }
+.nav-container button:hover {
+  transition: 1.5s all ease-in-out;
+  padding: 12px;
+}
