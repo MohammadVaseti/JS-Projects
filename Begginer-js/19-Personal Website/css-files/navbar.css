@@ -8,14 +8,18 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: rgb(170, 173, 181);
+  background-color: rgb(137, 140, 146);
 
   color: rgb(230, 230, 230);
+}
+.logo {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 2rem;
 }
 .container {
   width: 90%;
   min-height: 12%;
-  background-color: rgb(170, 173, 181);
+  background-color: rgb(137, 140, 146);
 }
 .nav-container {
   display: flex;
@@ -24,12 +28,12 @@ body {
   margin: 2%;
 }
 .links a {
-  font-size: 19px;
+  font-size: 1.2em;
   margin: 0 15px;
   transition: all 0.3s ease;
   text-decoration: none;
   list-style-type: none;
-  color: rgb(230, 230, 230);
+  color: rgb(240, 250, 259);
   cursor: pointer;
 }
 .links a:hover {
