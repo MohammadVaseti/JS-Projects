@@ -8,6 +8,7 @@
   align-items: center;
   flex-direction: column;
   animation: fade-in 3s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 @keyframes fade-in {
   0% {
@@ -21,7 +22,6 @@
   font-size: 1rem;
 }
 .footer-container:hover {
-  transition: all 2s ease-in-out;
   background-color: bisque;
   color: black;
 }
