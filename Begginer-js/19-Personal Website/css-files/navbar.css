@@ -1,17 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", "Montserrat", "Roboto";
-}
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(137, 140, 146);
-
-  color: rgb(230, 230, 230);
-}
 .logo {
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 2rem;
