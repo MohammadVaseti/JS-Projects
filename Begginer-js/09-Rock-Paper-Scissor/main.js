@@ -1,4 +1,10 @@
 "use strict";
+
+// elements
+let p1 = document.querySelector(".p1");
+let p2 = document.querySelector(".p2");
+let res = document.querySelector(".result");
+
 // game Choices
 const choices = ["rock", "paper", "scissors"];
 const randomNum1 = Math.floor(Math.random() * 3);
