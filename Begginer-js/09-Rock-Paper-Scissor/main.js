@@ -16,11 +16,13 @@ console.log(`player1 is ${player1} player2 is ${player2}`);
 
 // game Logic
 if (player1 === player2) {
-  console.log("draw");
+  res.innerHTML = "Game Was Draw";
 }
 // /////////////////
 else if (player1 == "rock" && player2 == "scissors") {
-  console.log("p1 is rock p2 is scissors => p1 win");
+  p1.innerHTML = "player1 is Rock";
+  p2.innerHTML = "player2 is Scissors";
+  res.innerHTML = "Player2 Was The Winner";
 } else if (player1 == "rock" && player2 == "paper") {
   console.log("p1 is rock p2 is paper => p2 win");
 }
