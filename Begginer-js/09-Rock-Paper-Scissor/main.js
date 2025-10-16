@@ -5,6 +5,7 @@ let p1 = document.querySelector(".p1");
 let p2 = document.querySelector(".p2");
 let res = document.querySelector(".result");
 
+window.alert("This Game Run Automaticly in Every 5 Seconds");
 // game Logic
 setInterval(() => {
   // game Choices
