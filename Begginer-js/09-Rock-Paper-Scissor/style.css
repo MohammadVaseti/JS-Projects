@@ -44,6 +44,9 @@ body {
   background-color: blue;
 }
 .result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5%;
   width: 70%;
   height: 100px;
