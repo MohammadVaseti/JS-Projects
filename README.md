@@ -17,7 +17,7 @@
 6. ### RND BG Color : _Random Background Color_
 7. ### Random-Password : _Generate New Password For Yourself_
 8. ### RGB-Range : _You Can Create Your Own RGB Color_
-9. ### Rock Paper Scissors : _Back to Your Childhood With This Nostalgic Game_
+9. ### Rock Paper Scissors : _Back to Your Childhood With This Nostalgic Game But This Time Automaticly_
 10. ### Simple-Text-Editor : _You Can Change Styles of Your Text With This Simple Editor_
 11. ### Picture Shower: _Give me Link of Your Picture i Will Show it_
 12. ### Drum Kit : _By Click On Your Keyboard You Can Hear Specific Tone_
