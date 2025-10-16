@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #22c1c3;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 250px;
+  background-color: white;
+}
+.p1 {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  color: white;
+}
+.p2 {
+  width: 50%;
+  height: 100%;
+  color: white;
+  background-color: blue;
+}
