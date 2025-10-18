@@ -3,15 +3,17 @@
   font-size: 2rem;
 }
 .container {
-  width: 90%;
-  min-height: 12%;
+  width: 100%;
+  height: 10vh;
   background-color: rgb(137, 140, 146);
 }
 .nav-container {
+  width: 100%;
+  height: 100%;
+  padding: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 2%;
 }
 .links a {
   font-size: 1.2em;
@@ -46,5 +48,7 @@
 }
 .nav-container button:hover {
   transition: 1.5s all ease-in-out;
+  background-color: rgb(106, 96, 96);
+  color: white;
   padding: 17px;
 }
