@@ -22,7 +22,8 @@
   font-size: 1rem;
 }
 .footer-container:hover {
-  background-color: bisque;
+  background-color: rgb(157, 159, 163);
+
   color: black;
 }
 .footer-container small {
