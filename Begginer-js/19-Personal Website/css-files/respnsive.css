@@ -10,4 +10,7 @@
   .hire {
     display: none;
   }
+  .hero-content .description {
+    font-size: 0.8rem;
+  }
 }
