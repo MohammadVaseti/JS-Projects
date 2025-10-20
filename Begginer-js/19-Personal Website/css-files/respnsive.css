@@ -1,5 +1,10 @@
+@media only screen and (min-width: 700px) {
+  .menu-btn span {
+    display: none;
+  }
+}
 @media only screen and (max-width: 700px) {
-  body {
-    background-color: lightblue;
+  a {
+    display: none;
   }
 }
