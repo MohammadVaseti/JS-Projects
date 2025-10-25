@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", "Montserrat", "Roboto";
+  scroll-behavior: smooth;
 }
 
 .main-container {
@@ -16,7 +17,7 @@
 
 .hero {
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background-color: silver;
   color: black;
   display: flex;
