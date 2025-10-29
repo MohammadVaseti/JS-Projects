@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  height: 100vh;
+  background-color: red;
+}
+
+/* navbar */
+.nav-container {
+  width: 100%;
+  height: 20vh;
+  background-color: blue;
+}
+/* hero section */
+.hero-section {
+  width: 100%;
+  height: 50vh;
+  background-color: yellow;
+}
