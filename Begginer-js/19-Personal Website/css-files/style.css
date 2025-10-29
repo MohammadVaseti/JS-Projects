@@ -7,20 +7,24 @@
 }
 .container {
   width: 100%;
-  height: 10vh;
+  height: 5vh;
   background-color: rgb(137, 140, 146);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.main-container {
+.nav-container {
+  position: fixed;
+  opacity: 0.3;
+  width: 100%;
   height: 100vh;
+  padding: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: rgb(137, 140, 146);
-  color: rgb(230, 230, 230);
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-container:hover {
+  opacity: 1;
 }
 
 .hero {
