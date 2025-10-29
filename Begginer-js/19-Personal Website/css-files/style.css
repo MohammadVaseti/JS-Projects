@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .main-container {
   height: 100vh;
@@ -14,6 +15,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 5%;
+}
+.links {
+  width: 70%;
+  text-align: center;
+}
+.links a {
+  margin: 2%;
+  text-decoration: none;
 }
 /* hero section */
 .hero-section {
